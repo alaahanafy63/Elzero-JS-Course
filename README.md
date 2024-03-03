@@ -1,1 +1,1 @@
-# Elzero---JS-Course
+# Elzero-JS-Course
