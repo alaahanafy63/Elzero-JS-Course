@@ -583,3 +583,63 @@ console.log(
 ); // eLZERO WEB SCHOOl
 */
 //----------------------------------------------------------------------------------------------------
+
+/*
+Comparison Operators
+  - == Equal
+  - != Not Equal
+
+  - === Identical
+  - !== Not Identical
+
+  - > Larger than
+  - >= Larger than or Equal
+
+  - < Smaller than 
+  - =< Smaller than or Equal
+*/
+
+/*console.log(10 == "10"); // compare value only
+console.log(-100 == "-100"); // compare value only
+console.log(10 != "10"); // compare value only
+
+console.log(10 === "10"); // compare value + type
+console.log(10 !== "10"); // compare value + type
+console.log(10 !== 10); // compare value + type
+
+console.log(10 > 20);
+console.log(10 > 10);
+console.log(10 >= 10);
+
+console.log(10 < 20);
+console.log(10 < 10);
+console.log(10 <= 10);
+
+console.log("Osama" === "Ahmed"); // false
+console.log(typeof "Osama" === typeof "Ahmed"); // true - both are string data type
+*/
+//----------------------------------------------------------------------------------------
+
+/*
+Logical Operators
+  - ! Not
+  - && And
+  - || or
+*/
+
+/*console.log(true); //true
+console.log(!true); //false
+
+console.log(10 == "10"); //true
+console.log(!(10 == "10")); //false
+
+console.log(10 == "10" && 10 > 8 && 10 >= 10); // true (all must be true)
+console.log(10 == "10" && 10 > 8 && 10 >= 50); // false (not all are true)
+
+console.log(10 == "10" || 10 > 80 || 10 >= 50); // true (one true is enough)
+*/
+//----------------------------------------------------------------------------------------
+
+/*
+if conditions
+*/
