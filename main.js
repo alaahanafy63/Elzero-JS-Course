@@ -360,7 +360,7 @@ console.log(Number.MAX_VALUE + 2134354543);
 //----------------------------------------------------------------------------------------
 
 /*
-Number Methods
+ Number Methods
   - Two dots to call a methods
   - tostring() //return number to string
   - tofixed() // return to string & aspecific number after (.) ex. 1.55 with decimal approximation
@@ -395,7 +395,7 @@ console.log(Number.isNaN(20)); // xxx return false
 */
 //----------------------------------------------------------------------------------------
 /* 
-Math Object
+ Math Object
   - round() // return number with normal approximation (below 5 or 5 and above)
   - ceil() // return number with approximation to heightst value (1) regardless of decimals number
   - floor() // return number with approximation to lowest value (0) regardless of decimals number
@@ -450,7 +450,7 @@ console.log(); // 67=> number
 //--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 /*
-String Methods -1
+ String Methods -1
   - Access with index // the number of position of an element in a sequence (sequenced data) and starts from (0)
   - Access with chartAt() // character at position - you give position it Returns the character at the specified index.
   - Length // Returns the length of a String object. without counting for indexing (stating from (1))
@@ -483,7 +483,7 @@ console.log(theName.trim().charAt(2).toUpperCase());
 //----------------------------------------------------------------------------------------------------
 
 /*
-String Methods -2
+ String Methods -2
   - indexOf(value [mand], start [opt] 0) // Returns the position of the first occurrence of a substring. and if couldn't find it then return (-1)
   - lastIndexOf(value [mand], start [opt] length) // Returns the last occurrence of a substring in the string.
   - slice(start [mand], end [opt] Not Including End index) // Returns a section of a string.
@@ -516,7 +516,7 @@ console.log(a.split("", 6)); // return with limit of 5 splits
 
 //----------------------------------------------------------------------------------------------------
 /*
-String Methods -3
+ String Methods -3
   - substring(start [mand], end [opt] Not Including End index)
    - start > end will swap
    - start < 0 it start from 0 // any negative value will make it start from zero
@@ -585,7 +585,7 @@ console.log(
 //--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 /*
-Comparison Operators
+ Comparison Operators
   - == Equal
   - != Not Equal
 
@@ -621,7 +621,7 @@ console.log(typeof "Osama" === typeof "Ahmed"); // true - both are string data t
 //----------------------------------------------------------------------------------------
 
 /*
-Logical Operators
+ Logical Operators
   - ! Not
   - && And
   - || or
@@ -642,7 +642,7 @@ console.log(10 == "10" || 10 > 80 || 10 >= 50); // true (one true is enough)
 
 /* Controle Flow */
 /*
-if conditions
+ if conditions
    - if
    - else if  (بتحقق شرط تاني اذا الاول لم يتحقق - أو)
    - else     (بتتحقق اذا لم يتحقق اي شرط من الشروط السابقة)
@@ -683,7 +683,7 @@ console.log(price); // 90
 //----------------------------------------------------------------------------------------
 
 /*
-Nested If
+ Nested If
 */
 
 /*if example*/
@@ -730,7 +730,7 @@ console.log(price); // 40
 //----------------------------------------------------------------------------------------
 
 /* 
-Conditional (Ternary) Operator
+ Conditional (Ternary) Operator
 */
 
 /*let theName = "Ahmed";
@@ -993,3 +993,31 @@ console.log(holidays);
 */
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+/*
+ Arrays
+  - create arrays [two methods] new Array() + []
+  - Access arrays elements
+  - Nasted arrays
+  - change arrays elements
+  - check for array: Array.isArray(arr); // to check if the element is array or not
+*/
+
+/*let myFriends = ["Ahmed", "Mohamed", "sayed", ["Marwan", "Ali"]];
+
+console.log(`Hello ${myFriends[0]}`); // Hello Ahmed
+console.log(`Hello ${myFriends[2]}`); // Hello sayed
+console.log(`${myFriends[1][2]}`); // h
+console.log(`Hello ${myFriends[3][1]}`); // Hello Ali
+console.log(`${myFriends[3][1][2]}`); // i
+
+console.log(myFriends);
+myFriends[1] = "Gamal";
+console.log(myFriends);
+myFriends[3] = "Sameh";
+console.log(myFriends);
+myFriends[3] = ["Sameh", "Ameer"];
+console.log(myFriends);
+
+console.log(Array.isArray(myFriends)); // true
+*/
