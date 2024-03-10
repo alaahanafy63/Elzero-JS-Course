@@ -1218,7 +1218,9 @@ Arrays Methods [Joining]
 
 // console.log(); // "Elzero"
 /*console.log(
-  my[--counter][zero] + my[counter][++zero] + my[--counter].slice(++zero)
+  my[--counter][zero] +
+    my[counter][--counter] +
+    my.slice(counter, ++counter).toString().slice(counter)
 ); */ //Elzero
 
 /*console.log(my[1][4] + my[1][5].toUpperCase());*/ // "rO"
