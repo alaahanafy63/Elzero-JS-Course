@@ -197,34 +197,44 @@ showInfo("Osama", 38, 20, "Yes", "HTML", "CSS");
 // showDetails(true, 38, "Osama"); // "Hello Osama, Your Age Is 38, You Are Available For Hire"
 // showDetails(false, "Osama", 38); // "Hello Osama, Your Age Is 38, You Are Not Available For Hire"
 
-function showDetails(a = "Un", b = "0", c = "Yes") {
-  let data = 0;
+/*function showDetails(...data) {
+  let a = 0;
+  let b = 0;
+  let c = 0;
   for (let i = 0; i < data.length; i++) {
-    if (
-      typeof a === "string" &&
-      typeof b === "number" &&
-      typeof c === "boolean"
-    ) {
-      console.log(`Hello ${a}, Your Age Is ${b}, You Are Available For Hire`);
-    } else {
-      console.log(`Unknown`);
-    }
+    typeof data[i] === "string" ? (a = data[i]) : a;
+    typeof data[i] === "number" ? (b = data[i]) : b;
+    typeof data[i] === "boolean" ? (c = data[i]) : c;
   }
+  c ? (c = "Available") : (c = "Not Available");
+  console.log(`Hello ${a}, Your Age Is ${b} ,You Are ${c} For Hire`);
 }
+*/
+
+/*function showDetails(...data) {
+  let name = 0;
+  let age = 0;
+  let status = 0;
+  for (let i = 0; i < data.length; i++) {
+    if (typeof data[i] === "string") {
+      name = data[i];
+    } else name = name;
+    if (typeof data[i] === "number") {
+      age = data[i];
+    } else age = age;
+    if (typeof data[i] === "boolean") {
+      if (data[i] === true) {
+        status = "Available";
+      } else status = "Not Available";
+    } else status = status;
+  }
+  console.log(`Hello ${name}, Your Age Is ${age} ,You Are ${status} For Hire`);
+}
+
 showDetails("Osama", 38, true);
 showDetails(38, "Osama", true);
 showDetails(true, 38, "Osama");
 showDetails(false, "Osama", 38);
-/*function calc(...numbers) {
-  //   console.log(Array.isArray(numbers)); // true
-  let result = 0;
-  for (let i = 0; i < numbers.length; i++) {
-    result += numbers[i]; // results + results + numbers[i]
-  }
-  return `Final Result is ${result}`;
-}
-console.log(calc(10, 20, 10, 30, 50, 30)); // Final Result is 150
-
-
-showInfo("Osama", 38, 20, "Yes", "HTML", "CSS");
 */
+
+// -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
