@@ -238,3 +238,261 @@ showDetails(false, "Osama", 38);
 */
 
 // -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+/*
+  Anonymous Function
+  - Anonymous function
+  - Calling named function VS Anonymous function
+  - Argument to other function
+  - Task without name
+  - SetTimeout
+*/
+
+/*let calculator = function (num1, num2) {
+  return num1 + num2;
+};
+console.log(calculator(10, 20));
+*/
+
+/*function sayHello() {
+  console.log("Hello Osama");
+}
+
+document.getElementById("show").onclick = sayHello;
+*/
+
+/*setTimeout(function () {
+  console.log("Good");
+}, 2000);
+*/
+
+// -------------------------------------------------------------------------------------------------------------
+
+/*
+  Function
+  - Function Inside Function
+  - Return Function
+*/
+
+// Example 1
+
+/*function sayMessage(fName, lName) {
+  let message = "Hello";
+  // Nested Function
+  function concatMsg() {
+    message = `${message} ${fName} ${lName}`;
+  }
+
+  concatMsg();
+
+  return message;
+}
+
+console.log(sayMessage("Osama", "Mohamed"));
+*/
+
+// Example 2
+
+/*function sayMessage(fName, lName) {
+  let message = "Hello";
+  // Nested Function
+  function concatMsg() {
+    return `${message} ${fName} ${lName}`;
+  }
+  return concatMsg();
+}
+
+console.log(sayMessage("Osama", "Mohamed"));
+*/
+
+// Example 3
+
+/*function sayMessage(fName, lName) {
+  let message = "Hello";
+  // Nested Function
+  function concatMsg() {
+    function getFullName() {
+      return `${fName} ${lName}`;
+    }
+    return `${message} ${getFullName()}`;
+  }
+  return concatMsg();
+}
+
+console.log(sayMessage("Osama", "Mohamed"));
+*/
+
+// -------------------------------------------------------------------------------------------------------------
+
+/*
+  Function
+  - Arrow function
+   - Regular VS Arrow [parm + No Parm]
+   - Multiple Lines // accepts only one statement
+*/
+
+/* Regular function
+// let print = function () {
+//   return 10;
+// };
+*/
+
+/* Arrow function no parameter
+let print = () => 10;
+console.log(print());
+
+ /* Arrow function // shortcut
+let prints = (_) => 10;
+console.log(prints());
+*/
+
+/* Arrow function with one parameter
+// let print = function (num) {
+//   return num;
+// };
+//--------------------------------------
+// let print = (num) => num;
+
+console.log(print(100));
+*/
+
+/* Arrow function with two parameter
+// let print = function (num1, num2) {
+//   return num1 + num2;
+// };
+//--------------------------------------
+let print = (num1, num2) => num1 + num2;
+
+console.log(print(100, 50));
+*/
+
+// -------------------------------------------------------------------------------------------------------------
+
+/*
+  Scope
+  - Globbal and Local
+*/
+
+/*var a = 1;
+let b = 2;
+
+function showText() {
+  var a = 10;
+  let b = 20;
+  console.log(`Function - From Local ${a}`);
+  console.log(`Function - From Local ${b}`);
+}
+
+console.log(`From Global ${a}`);
+console.log(`From Global ${b}`);
+
+showText();
+*/
+
+// -------------------------------------------------------------------------------------------------------------
+
+/*
+  Scope
+  - Block scope [IF, Switch, For]
+*/
+
+/*var x = 10;
+
+if (10 === 10) {
+  let x = 50;
+  console.log(`From If Block ${x}`);
+}
+
+console.log(`From Global ${x}`);
+*/
+
+// var a = 1;
+// let b = 2;
+
+// function showText() {
+//   var a = 10;
+//   let b = 20;
+//   console.log(`Function - From Local ${a}`);
+//   console.log(`Function - From Local ${b}`);
+// }
+
+// console.log(`From Global ${a}`);
+// console.log(`From Global ${b}`);
+
+// showText();
+
+// -------------------------------------------------------------------------------------------------------------
+
+/*
+  Scope
+  - Lexical Scope
+
+    Search
+  - Excution Context
+  - Lexical Environment
+*/
+
+/*function parent() {
+  let a = 10;
+
+  function child() {
+    console.log(a);
+    console.log(`From Ghild ${b}`);
+
+    function grand() {
+      let b = 100;
+      console.log(`From Grand ${a}`);
+      console.log(`From Grand ${b}`);
+    }
+    grand();
+  }
+  child();
+}
+parent();
+*/
+
+// -------------------------------------------------------------------------------------------------------------
+
+/*
+  Function Arrow Challenges
+*/
+
+// [1] One statement in function
+// [2] Convert to Arrow function
+// [3] Print the output [ Arguments May Changy]
+
+// let names = function (...fNames) {
+//   // parameters ?
+//   names = fNames;
+//   return `String [${fNames[0]}], [${fNames[1]}], [${fNames[2]}], [${fNames[3]}] => Done !`;
+// };
+
+// let names = (...fNames) =>
+//   `String [${fNames[0]}], [${fNames[1]}], [${fNames[2]}], [${fNames[3]}] => Done !`;
+
+// console.log(names("Osama", "Mohamed", "Ali", "Ibrahim"));
+
+// String [Osama], [Mohamed], [Ali], [Ibrahim] => Done !
+
+/* ==================================== */
+
+// [1] Replace ??? in return statement to get the output
+// [2] Create the same function with regular syntax
+// [3] Use array inside the arguments to get the output
+
+// let myNumbers = [20, 50, 10, 60];
+
+// let calc = (one, two, ...nums) => one + two + nums[+false];
+
+// console.log(calc(10, myNumbers[0], myNumbers[1])); //80
+
+// let myNumbers = [20, 50, 10, 60];
+
+// let calc = function (one, two, ...nums) {
+//   console.log(nums);
+//   return one + two + nums[+false];
+// };
+
+// console.log(calc(10, myNumbers[0], myNumbers[1])); //80
+
+// -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
