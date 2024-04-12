@@ -239,6 +239,109 @@ showDetails(false, "Osama", 38);
 
 // -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+/* Function And Parameters Assignments */
+/* Assignement 1 */
+
+// function sayHello(theName, theGender) {
+//   if (theGender === "Male") {
+//     console.log(`Hello Mr ${theName}`);
+//   } else if (theGender === "Female") {
+//     console.log(`Hello Miss ${theName}`);
+//   } else {
+//     console.log(`Hello ${theName}`);
+//   }
+// }
+
+// // Needed Output
+// sayHello("Osama", "Male"); // "Hello Mr Osama"
+// sayHello("Eman", "Female"); // "Hello Miss Eman"
+// sayHello("Sameh"); // "Hello Sameh"
+// // -------------------------------------------------------------------------------------------------------------
+
+/* Assignement 2 */
+// function calculate(firstNum, secondNum, operation) {
+//   let result = firstNum + secondNum;
+//   if (operation === "add") {
+//     result = firstNum + secondNum;
+//     console.log(result);
+//   } else if (operation === "subtract") {
+//     result = firstNum - secondNum;
+//     console.log(result);
+//   } else if (operation === "multiply") {
+//     result = firstNum * secondNum;
+//     console.log(result);
+//   } else if (secondNum === undefined) {
+//     console.log(`Second Number Not Found`);
+//   } else {
+//     console.log(result);
+//   }
+// }
+
+// // Needed Output
+// calculate(20); // Second Number Not Found
+// calculate(20, 30); // 50
+// calculate(20, 30, "add"); // 50
+// calculate(20, 30, "subtract"); // -10
+// calculate(20, 30, "multiply"); // 600
+// -------------------------------------------------------------------------------------------------------------
+
+/* Assignement 3 */
+// function ageInTime(theAge) {
+//   let months = theAge * 12;
+//   let weeks = months * 4;
+//   let days = weeks * 7;
+//   let minutes = days * 24;
+//   let seconds = minutes * 60;
+//   if (theAge > 10 && theAge < 100) {
+//     console.log(`${months} Months`);
+//     console.log(`${weeks} Weeks`);
+//     console.log(`${days} Days`);
+//     console.log(`${minutes} Minutes`);
+//     console.log(`${seconds} Seconds`);
+//   } else {
+//     console.log(`Age Out Of Range`);
+//   }
+// }
+
+// // Needed Output
+// ageInTime(110); // Age Out Of Range
+// ageInTime(38); // Months Example => 456 Months
+// -------------------------------------------------------------------------------------------------------------
+
+/* Assignement 5 */
+// function createSelectBox(startYear, endYear) {
+//   document.write(`<div>`);
+//   document.write(`<select>`);
+
+//   for (let i = startYear; i <= endYear; i++) {
+//     document.write(`<option value= ${i}>`);
+//     document.write(i);
+//     document.write(`</option>`);
+//   }
+
+//   document.write(`</select>`);
+//   document.write(`</div>`);
+// }
+// createSelectBox(2000, 2021);
+// -------------------------------------------------------------------------------------------------------------
+
+/* Assignement 6 */
+// function multiply(...numbers) {
+//   let result = 1;
+//   for (let i = 0; i < numbers.length; i++) {
+//     if (typeof numbers[i] === "string") {
+//       continue;
+//     } else {
+//       result *= Math.trunc(numbers[i]);
+//     }
+//   }
+//   console.log(result);
+// }
+// multiply(10, 20); // 200
+// multiply("A", 10, 30); // 300
+// multiply(100.5, 10, "B"); // 1000
+// -------------------------------------------------------------------------------------------------------------
+
 /*
   Anonymous Function
   - Anonymous function
@@ -495,4 +598,88 @@ parent();
 
 // console.log(calc(10, myNumbers[0], myNumbers[1])); //80
 
+// -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+/* Function And Scopes Assignments */
+/* Assignement 1 */
+// function getDetails(zName, zAge, zCountry) {
+//   function namePattern(zName) {
+//     // Write Your Code Here
+//     // Osama Mohamed => Osama M.
+//     // Ahmed ali => Ahmed A.
+//     return `Hello ${zName.slice(0, 6)} ${zName.charAt(6).toUpperCase()}`;
+//   }
+//   namePattern(zName);
+//   function ageWithMessage(zAge) {
+//     // Write Your Code Here
+//     // 38 Is My Age => Your Age Is 38
+//     // 32 Is The Age => Your Age Is 32
+//     return `Your Age Is ${parseInt(zAge)}`;
+//   }
+//   ageWithMessage(zAge);
+//   function countryTwoLetters(zCountry) {
+//     // Write Your Code Here
+//     // Egypt => You Live In EG
+//     // Syria => You Live In SY
+//     return `You Live In ${zCountry.slice(0, 2).toUpperCase()}`;
+//   }
+//   countryTwoLetters(zCountry);
+//   function fullDetails() {
+//     // Write Your Code Here
+//     return `Hello ${zName.slice(0, 6)}${zName
+//       .charAt(6)
+//       .toUpperCase()}., Your Age Is ${parseInt(zAge)}, You Live In ${zCountry
+//       .slice(0, 2)
+//       .toUpperCase()}`;
+//   }
+//   return fullDetails(); // Do Not Edit This
+// }
+
+// console.log(getDetails("Osama Mohamed", "38 Is My Age", "Egypt"));
+// // Hello Osama M., Your Age Is 38, You Live In EG
+
+// console.log(getDetails("Ahmed ali", "32 Is The Age", "Syria"));
+// // Hello Ahmed A., Your Age Is 32, You Live In SY
+
+// -------------------------------------------------------------------------------------------------------------
+
+/* Assignement 2 */
+// function itsMe() {
+//   return `Iam A Normal Function`;
+// }
+
+// let itsMe = () => `Iam A Normal Function`;
+
+// console.log(itsMe()); // Iam A Normal Function
+
+// function urlCreate(protocol, web, tld) {
+//   return `${protocol}://www.${web}.${tld}`;
+// }
+
+// let urlCreate = (protocol, web, tld) => {
+//   return `${protocol}://www.${web}.${tld}`;
+// };
+
+// console.log(urlCreate("https", "elzero", "org")); // https://www.elzero.org
+
+// -------------------------------------------------------------------------------------------------------------
+
+/* Assignement 4 */
+// function specialMix(...data) {
+//   let result = 0;
+//   for (let i = 0; i < data.length; i++) {
+//     if (isNaN(parseInt(data[i])) === false) {
+//       result += parseInt(data[i]);
+//     }
+//   }
+//   if (result === 0) {
+//     return `All Is String`;
+//   }
+//   return result;
+// }
+
+// console.log(specialMix(10, 20, 30)); // 60
+// console.log(specialMix("10Test", "Testing", "20Cool")); // 30
+// console.log(specialMix("Testing", "10Testing", "40Cool")); // 50
+// console.log(specialMix("Test", "Cool", "Test")); // All Is Strings
 // -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
