@@ -324,6 +324,290 @@ DOM Assignments part - 1
 // console.log(myFirstElementChild);
 // console.log(myChildren);
 // console.log(myChildNodes);
+
 // -------------------------------------------------------------------
 
-//// Assignment 2
+/*
+  DOM [Events Simulation]
+   - click
+   - focus
+   - blur
+*/
+
+// let one = document.querySelector(".one");
+// let two = document.querySelector(".two");
+
+// window.onload = function () {
+//   two.focus();
+// };
+
+// one.onblur = function () {
+//   document.links[0].click();
+// };
+
+// -------------------------------------------------------------------
+
+/*
+  DOM [Class List object]
+   - classList
+    - length
+    - contains
+    - item(index)
+    - add
+    - remove
+    - toggle
+*/
+
+// let element = document.getElementById("my-div");
+
+// console.log(element.classList);
+// console.log(element.classList.contains("osama"));
+// console.log(element.classList.contains("show"));
+// console.log(element.classList.item("3"));
+
+// // element.onclick = function () {
+// //   element.classList.add("add-one", "add-two");
+// // };
+
+// // element.onclick = function () {
+// //   element.classList.remove("one", "two");
+// // };
+
+// element.onclick = function () {
+//   element.classList.toggle("show");
+// };
+
+// -------------------------------------------------------------------
+
+/*
+  DOM [CSS]
+   - style
+   - cssText
+   - removeProperty(propertyName) [Inline, Stylesheet]
+   - setProperty(propertyName, value, priority)
+*/
+
+// let element = document.getElementById("my-div");
+
+// element.style.color = "red";
+// element.style.fontWeight = "bold";
+
+// element.style.cssText = "font-weight: bold; color: green; opacity: 0.9";
+
+// element.style.removeProperty("color");
+// element.style.setProperty("font-size", "40px", "important");
+
+// document.styleSheets[0].rules[0].style.removeProperty("line-height");
+// document.styleSheets[0].rules[0].style.setProperty(
+//   "background-color",
+//   "red",
+//   "important"
+// );
+
+// -------------------------------------------------------------------
+
+/*
+  DOM [Deal with Elements]
+   - before [Element || String]
+   - after [Element || String]
+   - append [Element || String]
+   - prepend [Element || String]
+   - remove
+*/
+
+// let element = document.getElementById("my-div");
+// let createdP = document.createElement("p");
+
+// element.before("Hello From JS");
+// element.after("Hello From JS");
+// element.after(createdP);
+// element.append("Hello From JS");
+// element.prepend("Hello From JS");
+// element.append(createdP);
+// element.prepend(createdP);
+// element.remove();
+
+// -------------------------------------------------------------------
+
+/*
+  DOM [Traversing]
+   - nextSibling
+   - previousSibling
+   - nextElementSibling
+   - previousElementSibling
+   - parentElement
+*/
+
+// let span = document.querySelector(".two");
+
+// console.log(span.nextSibling);
+// console.log(span.nextElementSibling);
+// console.log(span.previousSibling);
+// console.log(span.previousElementSibling.remove());
+
+// console.log(span.parentElement);
+
+// span.onclick = function () {
+//   span.parentElement.style.opacity = 0;
+// };
+
+// -------------------------------------------------------------------
+
+/*
+  DOM [Cloning]
+   - cloneNodes(Deep)
+*/
+
+// let myP = document.querySelector("p").cloneNode(true);
+// let myDiv = document.querySelector("div");
+
+// myP.id = `${myP.id}-clone`;
+
+// myDiv.appendChild(myP);
+
+// -------------------------------------------------------------------
+
+/*
+  DOM [Add Event Listener]
+   - addEventListener
+   - Use without On
+   - Attach Multiple Events
+   - Error Test
+
+  Search
+   - Capture & Building JavaScript
+   - remove EventListener
+*/
+
+// let myP = document.querySelector("p");
+
+// myP.onclick = one;
+// myP.onclick = two;
+
+// function one() {
+//   console.log("Message From OnClick 1");
+// }
+
+// function two() {
+//   console.log("Message From OnClick 2");
+// }
+
+// window.onload = "Ahmed";
+
+// myP.addEventListener("click", function () {
+//   console.log("Message From OnClick 1 Event");
+// });
+
+// myP.addEventListener("click", one);
+// myP.addEventListener("click", two);
+
+// myP.addEventListener("click", "String"); // Error
+
+// myP.onclick = function () {
+//   let newP = myP.cloneNode(true);
+//   newP.className = "clone";
+//   document.body.appendChild(newP);
+// };
+
+// // let cloned = document.querySelector(".clone");    // Error
+
+// // cloned.onclick = function () {
+// //   console.log("Iam Cloned");
+// // };
+
+// document.addEventListener("click", function (e) {
+//   if (e.target.className === "clone") {
+//     console.log("Iam Cloned");
+//   }
+// });
+
+// -------------------------------------------------------------------
+
+/* 
+  DOM Challenge
+*/
+// Body
+// document.body.style.cssText =
+//   "font-family: Tahoma; margin: 0px; background-color: rgb(236, 236, 236);";
+
+// // Header
+// let myHeader = document.createElement("header");
+
+// document.body.appendChild(myHeader);
+// myHeader.className = "website-head";
+// myHeader.style.cssText =
+//   "display: flex; padding: 20px; background-color: rgb(255, 255, 255); justify-content: space-between; align-items: center;";
+
+// //// Logo
+// let myLogo = document.createElement("div");
+// let myLogoText = document.createTextNode("Elzero");
+
+// myHeader.appendChild(myLogo);
+// myLogo.className = "logo";
+// myLogo.title = "Website Logo";
+// myLogo.style.cssText =
+//   "font-weight: bold; color: rgb(35, 169, 110); font-size: 26px;";
+// myLogo.appendChild(myLogoText);
+
+// //// Menu
+// let myMenu = document.createElement("ul");
+
+// myHeader.appendChild(myMenu);
+// myMenu.className = "menu";
+// myMenu.style.cssText =
+//   "padding: 0px; margin: 0px; display: flex; gap: 16px; list-style: none;";
+
+// ////// Menu Items
+// let myMenuItems1 = document.createTextNode("Home");
+// let myMenuItems2 = document.createTextNode("About");
+// let myMenuItems3 = document.createTextNode("Service");
+// let myMenuItems4 = document.createTextNode("Contact");
+
+// for (let i = 0; i <= 3; i++) {
+//   let myMenuItems = document.createElement("li");
+//   myMenu.appendChild(myMenuItems);
+// }
+// myMenu.firstChild.appendChild(myMenuItems1);
+// myMenu.children[1].appendChild(myMenuItems2);
+// myMenu.children[2].appendChild(myMenuItems3);
+// myMenu.lastChild.appendChild(myMenuItems4);
+
+// // Products Div
+// let productsDiv = document.createElement("div");
+
+// document.body.appendChild(productsDiv);
+// productsDiv.className = "content";
+// productsDiv.style.cssText =
+//   "display: flex; padding: 20px; flex-wrap: wrap; justify-content: center; gap: 20px; min-height: calc(100vh - 142px); box-sizing: border-box;";
+
+// //// Products
+// for (let e = 1; e <= 15; e++) {
+//   let product = document.createElement("div");
+//   let productContent = document.createElement("span");
+//   let productNumber = document.createTextNode(`${e}`);
+
+//   product.className = "product";
+//   product.style.cssText =
+//     "padding: 20px; background-color: rgb(255, 255, 255); border: 1px solid rgb(221, 221, 221); width: calc((100% - 40px) / 3); box-sizing: border-box; text-align: center; color: rgb(136, 136, 136); border-radius: 6px;";
+
+//   productContent.style.cssText =
+//     "font-size: 40px; color: black; margin-bottom: 10px; margin-top: 10px; display: block;";
+
+//   productsDiv.appendChild(product);
+//   product.appendChild(productContent);
+//   productContent.appendChild(productNumber);
+//   productContent.after("Product");
+// }
+
+// // Footer
+// let myFooter = document.createElement("footer");
+// let myFooterContent = document.createTextNode("Copyright 2024");
+
+// myFooter.className = "footer";
+// myFooter.style.cssText =
+//   "background-color: rgb(35, 169, 110); font-size: 26px; text-align: center; padding: 20px; color: rgb(255, 255, 255);";
+
+// document.body.appendChild(myFooter);
+// myFooter.appendChild(myFooterContent);
+
+// -------------------------------------------------------------------
